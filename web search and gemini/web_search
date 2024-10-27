@@ -1,0 +1,31 @@
+from duckduckgo_search import DDGS 
+import requests
+from bs4 import BeautifulSoup
+
+def search(query):
+# Initialize the search engine
+    search = DDGS() 
+    # Perform a search
+    results = search.text(query)    
+    return results
+
+def extract_text_from_url(url):
+    webpage = fetch_full_page(url)
+    # replace consecutive newlines with a single newline
+    webpage = '\n'.join([line for line in webpage.split('\n') if line.strip() != ''])
+    return webpage
+
+def fetch_full_page(url):
+    try:
+        # Send an HTTP GET request to the URL
+        response = requests.get(url)
+        # If the request was successful (status code 200)
+        if response.status_code == 200:
+            # Parse the HTML content
+            soup = BeautifulSoup(response.content, 'html.parser')
+            # Extract and return the text from the page
+            return soup.get_text(separator="\n")
+        else:
+            return f"Failed to retrieve page: {response.status_code}"
+    except Exception as e:
+        return f"Error fetching page: {str(e)}"

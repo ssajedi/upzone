@@ -1,0 +1,136 @@
+import os
+import json
+from llm import ai_response,construct_user_prompt
+
+def scrap_height(zone_names,model_name="gemini"):
+    # create an empty directory
+    dir_name = "height"
+    os.makedirs(dir_name, exist_ok=True)
+    for zone in zone_names:
+        try:
+            search_query = f"min and max height limits for buildings in in NYC zone {zone}"
+            user_prompt = f"""Your task is to extract min and max height limits for buildings in in NYC zone {zone} based on
+            provided web search results and answer the user's question only based on this data.\
+            The user query is delimited by triple asterisks\.
+            The reference web search documents in are delimited with triple backticks.
+            in the json format, for example:
+            {{
+                "min_height": 50,
+                "max_height": 100
+            }}
+
+            only output the json object, do not include any other information.
+            """
+            aug_prompt = construct_user_prompt(user_prompt,search_query)
+
+            response = ai_response(model_name, aug_prompt)
+            # print(response.text)
+
+            clean_text = response.split("{")[1].split("}")[0]
+            response_json = json.loads("{" + clean_text + "}")
+            
+            # save as json to a file
+            with open(f"{dir_name}/{zone}.json", "w") as f:
+                json.dump(response_json, f)
+        except Exception as e:
+            print(f"zone {zone} ignored due to error: {str(e)}")
+
+def scrap_setback(zone_names,model_name="gemini"):
+    # create an empty directory
+    dir_name = "setbacks"
+    os.makedirs(dir_name, exist_ok=True)
+    for zone in zone_names:
+        try:
+            search_query = f"side,back,front setbacks for buildings in in NYC zone {zone}"
+            user_prompt = f"""Your task is to extract side,back,front setbacks for buildings in in NYC zone {zone} based on
+            provided web search results and answer the user's question only based on this data.\
+            The user query is delimited by triple asterisks\.
+            The reference web search documents in are delimited with triple backticks.
+            in the json format, for example:
+            {{
+                "front": 50,
+                "side": 20,
+                "back": 15
+            }}
+
+            only output the json object, do not include any other information.
+            """
+            aug_prompt = construct_user_prompt(user_prompt,search_query)
+
+            response = ai_response(model_name, aug_prompt)
+            # print(response.text)
+
+            clean_text = response.split("{")[1].split("}")[0]
+            response_json = json.loads("{" + clean_text + "}")
+            
+            
+            # save as json to a file
+            with open(f"{dir_name}/{zone}.json", "w") as f:
+                json.dump(response_json, f)
+        except Exception as e:
+            print(f"zone {zone} ignored due to error: {str(e)}")
+
+def scrap_exposure_angle(zone_names,model_name="gemini"):
+    # create an empty directory
+    dir_name = "exposure angles"
+    os.makedirs(dir_name, exist_ok=True)
+    for zone in zone_names:
+        try:
+            search_query = f"sky exposure angle for buildings in in NYC zone {zone}"
+            user_prompt = f"""Your task is to extract sky exposure angle for buildings in in NYC zone {zone} based on
+            provided web search results and answer the user's question only based on this data.\
+            The user query is delimited by triple asterisks\.
+            The reference web search documents in are delimited with triple backticks.
+            in the json format, for example:
+            {{
+                "angle": 30,
+            }}
+
+            only output the json object, do not include any other information.
+            """
+            aug_prompt = construct_user_prompt(user_prompt,search_query)
+
+            response = ai_response(model_name, aug_prompt)
+            # print(response.text)
+
+            clean_text = response.split("{")[1].split("}")[0]
+            response_json = json.loads("{" + clean_text + "}")
+            
+            
+            # save as json to a file
+            with open(f"{dir_name}/{zone}.json", "w") as f:
+                json.dump(response_json, f)
+        except Exception as e:
+            print(f"zone {zone} ignored")
+
+def scrap_hofl(zone_names,model_name="gemini"):
+    # create an empty directory
+    dir_name = "hofl"
+    os.makedirs(dir_name, exist_ok=True)
+    for zone in zone_names:
+        try:
+            search_query = f"Height above front yardline or max height of front wall for buildings in in NYC zone {zone}"
+            user_prompt = f"""Your task is to extract height above front yardline (aka max height of front wall) for buildings in in NYC zone {zone} based on
+            provided web search results and answer the user's question only based on this data.\
+            The user query is delimited by triple asterisks\.
+            The reference web search documents in are delimited with triple backticks.
+            in the json format, for example:
+            {{
+                "hofl": 50,
+            }}
+
+            only output the json object, do not include any other information.
+            """
+            aug_prompt = construct_user_prompt(user_prompt,search_query)
+
+            response = ai_response(model_name, aug_prompt)
+            # print(response.text)
+
+            clean_text = response.split("{")[1].split("}")[0]
+            response_json = json.loads("{" + clean_text + "}")
+            
+            # save as json to a file
+            with open(f"{dir_name}/{zone}.json", "w") as f:
+                json.dump(response_json, f)
+        except Exception as e:
+            print(f"zone {zone} ignored")

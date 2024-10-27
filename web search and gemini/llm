@@ -1,0 +1,40 @@
+import openai
+import google.generativeai as genai
+from web_search import search, extract_text_from_url
+
+def ai_response(model_name, aug_prompt):
+    if model_name == "chatgpt":
+        messages =  [
+                    {'role':'system', 'content':'You are a helpful assistant.'},
+                    {'role':'user', 'content':aug_prompt}]
+        response = openai.chat.completions.create(
+            model='gpt-4o',
+            messages=messages,
+            # temperature=0.3, # this is the degree of randomness of the model's output
+        )
+        # print(response.choices[0].message.content)
+        # save as text file
+        response = response.choices[0].message.content
+    elif model_name == "gemini":
+        gemini_model = genai.GenerativeModel("gemini-1.5-flash")
+
+        response = gemini_model.complete(aug_prompt)
+        response = response.choices[0].text
+    else:
+        raise ValueError("Invalid model name")
+    return response
+
+def construct_user_prompt(main_prompt,search_query, top_k=3):
+    results = search(search_query)
+    # print(results)
+    # print(f"top k results: {top_k}")
+    # print(f"results:\n{results}")
+    prompt = f"***{main_prompt}***\n"
+    for i in range(top_k):
+        url = results[i]['href']
+        # print(url)
+        text = extract_text_from_url(url)
+        # text = results[i]['body']
+        prompt = prompt + f"```Ref: {url}\n,{text}```"
+    # print("")
+    return prompt

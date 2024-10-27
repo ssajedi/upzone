@@ -1,0 +1,38 @@
+
+import json
+import os
+import openai
+import google.generativeai as genai
+from scraper import scrap_height, scrap_hofl, scrap_setback, scrap_exposure_angle
+
+oai_secret = "Add your OpenAI API key here" # if you intend to use OpenAI's ChatGPT model
+gem_secret = "Add your Google API key here"
+
+model_name = "gemini" # optionally change to "chatgpt" to use OpenAI's ChatGPT model
+openai.api_key = oai_secret
+genai.configure(api_key=gem_secret)
+
+zone_names = ['C5-5','R6B','R2']
+
+# scrape data from internet
+scrap_height(zone_names,model_name=model_name)
+scrap_setback(zone_names,model_name=model_name)
+scrap_exposure_angle(zone_names,model_name=model_name)
+scrap_hofl(zone_names,model_name=model_name)
+
+# combine json files 
+combined_dataset_dir = "Combined dataset for gh"
+dir_names = ["height","setbacks","exposure angles",'hofl']
+os.makedirs(combined_dataset_dir, exist_ok=True)
+for dir in dir_names:
+    for zone in zone_names:
+        with open(f"{dir}/{zone}.json", "r") as f:
+            data = json.load(f)
+            print(data)
+            for key in data:
+                if key in ['back','front','side','min_height','max_height']:
+                    save_fname =key
+                else:
+                    save_fname = dir
+                with open(f"{combined_dataset_dir}/{save_fname}.txt", "a") as f:
+                    f.write(f"{data[key]}\n")
