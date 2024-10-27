@@ -14,7 +14,7 @@ In order to use UPZone, you will need:
 
 # Zone parameters 
 The team experimented with two methods to extract the following parameters:
-* Setback: front, rear, side
+* Setback: front, rear, and side
 * Sky exposure angle
 * Height limit
 * Maximum height for front yard line
