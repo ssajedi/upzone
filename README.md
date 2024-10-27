@@ -22,7 +22,7 @@ The team experimented with two methods to extract the following parameters:
 We utilized [Swiftlet](https://www.food4rhino.com/en/app/swiftlet) to call the ChatGPT API and extract these values from the LLM. Please refer to the grasshopper definition for further details on how prompt engineering was done. 
 
 ## Web search + Gemini experiment (method 2)
-We utilized a python library to perform search using DuckDuckGo library and scrape web for the required values. The inputs were then fed to Google Geimini Flash 1.5 https://pypi.org/project/duckduckgo-search/
+We utilized a python library to perform search using [DuckDuckGo library](https://pypi.org/project/duckduckgo-search/) and scrape web for the required values. The inputs were then fed to Google Geimini Flash 1.5 
 
   
 # Grasshopper Plugin
