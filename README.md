@@ -22,11 +22,11 @@ In order to use UPZone, you will need:
 |----------------------------------------|--------------------------------|
 | **Anish Reddy**                        | Perkins & Will                 | 
 | **Eddy Lopez**                         | LPA                            |
-| **Elcin Ertugrul**                     | TTCore                         |
-| **Georgios Athanasopoulos**            | TT                             |
-| **Jari Prachasartta**                  | KPFui                          |
+| **Elcin Ertugrul**                     | Thronton Tomasetti             |
+| **Georgios Athanasopoulos**            | Thronton Tomasetti             |
+| **Jari Prachasartta**                  | KPF                            |
 | **Jihoon Park**                        | Walter P Moore                 |
 | **Joyce Hanlon**                       | Snøhetta                       |
 | **Mahsa Dehghani**                     | Memo Studio & Corgan           |
-| **Omid Sajedi**                        | TTCore                         |
-| **Susanna van de Graaf**               | TT                             |
+| **Omid Sajedi**                        | Thronton Tomasetti             |
+| **Susanna van de Graaf**               | Thronton Tomasetti             |
