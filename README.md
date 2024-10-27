@@ -4,18 +4,14 @@
 # UPZONE
 UpZone is your one-click solution to identifying your NYC lot's buildable zoning volume. The app searches multi-thousand-page zoning resolution documents and nyc.gov websites, identifies relevant zoning requirements with the help of large language models, and models a 3D volume in Rhino that is ready for designers to build their designs within. UpZone is an app developed during the 2024 [AECTech Hackathon](https://www.aectech.us/nyc-conference) by a diverse team of architects, software developers, ML engineers, computational designers, and structural engineers.
 
-<video width="600" controls>
-  <source src="assets/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+## Demo
+![Alt Text](gdemo.gif)
 
 # Prerequisites
 In order to use UPZone, you will need:
 * A free [Shapediver](https://www.shapediver.com/) account
 * An [OpenAI API key](https://platform.openai.com/)
 
-## Demo
-Watch the video demo [here](assets/demo-video.mp4)
 
 # Zone parameters 
 The team experimented with two methods to extract the following parameters:
