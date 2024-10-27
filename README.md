@@ -2,7 +2,7 @@
 
 
 # UPZONE
-UpZone is your one-click solution to identifying your NYC lot's buildable zoning volume. The app searches multi-thousand-page zoning resolution documents and nyc.gov websites, identifies relevant zoning requirements with the help of large language models, and models a 3D volume in Rhino that is ready for designers to build their designs within. UpZone is an app developed during the 2024 [AECTech Hackathon](https://www.aectech.us/nyc-conference) by a diverse team of architects, software developers, ML engineers, computational designers, and structural engineers.
+UpZone is your one-click solution to modeling your NYC lot's buildable zoning volume. Prototyped in NYC in 24 hours, the app searches multi-thousand-page zoning resolution documents and city websites, identifies relevant zoning requirements, and generates a user-friendly 3D model for architects to hit the ground running with design. UpZone is an app developed during the 2024 [AECTech Hackathon](https://www.aectech.us/nyc-conference) by a diverse team of architects, software developers, machine learning engineers, computational designers, and structural engineers. It combines large language models with spatial algorithms to turn complex and interconnected data into a clean, legible 3D model.
 
 ![Alt Text](assets/gdemo.gif)
 
