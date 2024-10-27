@@ -16,18 +16,17 @@ In order to use UPZone, you will need:
 # Grasshopper Plugin
 [Elcin and Jari]
 
-# Team
-## Team Members
+# Team Members
 
-| Name                                   | Company                        | Picture                                                    |
-|----------------------------------------|--------------------------------|------------------------------------------------------------|
-| **Anish Reddy**                        | Perkins & Will                 | ![Anish Reddy](assets/Anish Reddy_Perkins & Will.jpg)       |
-| **Eddy Lopez**                         | LPA                            | ![Eddy Lopez](assets/Eddy Lopez_LPA.jpg)                   |
-| **Elcin Ertugrul**                     | TTCore                         | ![Elcin Ertugrul](assets/Elcin Ertugrul_TTCore.jpg)        |
-| **Georgios Athanasopoulos**            | TT                             | ![Georgios Athanasopoulos](assets/Georgios Athanasopoulos_TT.jpg) |
-| **Jari Prachasartta**                  | KPFui                          | ![Jari Prachasartta](assets/Jari Prachasartta_KPFui.jpg)    |
-| **Jihoon Park**                        | Walter P Moore                 | ![Jihoon Park](assets/Jihoon Park_Walter P Moore.jpg)       |
-| **Joyce Hanlon**                       | Snøhetta                       | ![Joyce Hanlon](assets/Joyce Hanlon_Snøhetta.jpg)           |
-| **Mahsa Dehghani**                     | Memo Studio & Corgan           | ![Mahsa Dehghani](assets/Mahsa Dehghani_Memo Studio & Corgan.jpg) |
-| **Omid Sajedi**                        | TTCore                         | ![Omid Sajedi](assets/Omid Sajedi_TTCore.jpg)               |
-| **Susanna van de Graaf**               | TT                             | ![Susanna van de Graaf](assets/Susanna van de Graaf_TT.jpg) |
+| Name                                   | Company                        |
+|----------------------------------------|--------------------------------|
+| **Anish Reddy**                        | Perkins & Will                 | 
+| **Eddy Lopez**                         | LPA                            |
+| **Elcin Ertugrul**                     | TTCore                         |
+| **Georgios Athanasopoulos**            | TT                             |
+| **Jari Prachasartta**                  | KPFui                          |
+| **Jihoon Park**                        | Walter P Moore                 |
+| **Joyce Hanlon**                       | Snøhetta                       |
+| **Mahsa Dehghani**                     | Memo Studio & Corgan           |
+| **Omid Sajedi**                        | TTCore                         |
+| **Susanna van de Graaf**               | TT                             |
