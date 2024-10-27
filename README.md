@@ -14,6 +14,9 @@ In order to use UPZone, you will need:
 * A free [Shapediver](https://www.shapediver.com/) account
 * An [OpenAI API key](https://platform.openai.com/)
 
+## Demo
+Watch the video demo [here](assets/demo-video.mp4)
+
 # Zone parameters 
 The team experimented with two methods to extract the following parameters:
 * Setback: front, rear, side
