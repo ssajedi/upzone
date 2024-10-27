@@ -28,7 +28,17 @@ We utilized a python library to perform search using [DuckDuckGo library](https:
 
   
 # Grasshopper Plugin
-[Elcin and Jari]
+In order to process to geometries, you will need:
+* Rhino 7 or 8
+* The [Swiftlet](https://www.food4rhino.com/en/app/swiftlet) plugin for grasshopper
+* [Lot](https://github.com/ssajedi/upzone/blob/main/geojson/lotGeometries.geojson) geometry data
+* [Building Footprint](https://github.com/ssajedi/upzone/blob/main/geojson/lotGeometries.geojson) geometry data
+
+The raw data was processed in QGIS to obtain the subset GeoJSON, which is then converted to Grasshopper polylines using our custom C# component. However, there is an option in the grasshopper script that allows you to make an API call if the data is available as a geoJSON.
+
+Data source:
+* Lot geometries: [MapPLUTO - Shoreline Clipped (Shapefile)](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page). 
+* Building geometries: [Building Footprints from NYC Opendata](https://data.cityofnewyork.us/Housing-Development/Building-Footprints/nqwf-w8eh). 
 
 # Team Members
 
